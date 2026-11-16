@@ -24,9 +24,11 @@ export interface Profile {
   readonly location: string;
   readonly email: string;
   readonly phone: string;
-  /** Path to the downloadable résumé PDF, served from /public. */
-  readonly resumeUrl: string;
-  /** Filename suggested to the browser when the résumé is downloaded. */
+  /**
+   * Résumé PDF filename in /public. The actual URL is built at runtime from
+   * `import.meta.env.BASE_URL` so it stays correct under a GitHub Pages
+   * project subpath as well as at the domain root.
+   */
   readonly resumeFileName: string;
   readonly summary: string;
   /** Short, scannable highlights rendered as hero stat chips. */

@@ -95,6 +95,27 @@ suggested filename live in the content model (`profile.resumeUrl` /
 
 ## Deployment
 
-The build is fully static. `bun run build` emits `dist/`, deployable to any
-static host (Netlify, Vercel, GitHub Pages, S3 + CloudFront, nginx). No server
-or environment variables required.
+The build is fully static — `bun run build` emits `dist/`, deployable to any
+static host. No server or runtime environment variables required.
+
+### GitHub Pages (automated)
+
+Pushing to `main` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),
+which type-checks, tests, builds and publishes to GitHub Pages via the official
+Actions pipeline (`configure-pages` → `upload-pages-artifact` → `deploy-pages`).
+
+- **Live URL:** `https://karthik1210100.github.io/portfolio_2026/`
+- The build is served from the project subpath. `VITE_BASE` is set to
+  `/<repo>/` in the workflow, and every asset URL — including the résumé PDF
+  link, built from `import.meta.env.BASE_URL` — resolves under that base. Local
+  `bun run dev` / `build` stay at `/`.
+
+**One-time setup:** in **Settings → Pages → Build and deployment**, set
+**Source** to **GitHub Actions**. The workflow attempts to enable this
+automatically (`configure-pages` with `enablement: true`); if the first run is
+blocked on permissions, flip the setting and re-run the workflow.
+
+### Other static hosts
+
+`dist/` also deploys as-is to Netlify, Vercel, S3 + CloudFront or nginx. For a
+root-domain host, no `VITE_BASE` is needed (defaults to `/`).

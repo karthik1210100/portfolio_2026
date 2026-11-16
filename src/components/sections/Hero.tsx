@@ -69,7 +69,7 @@ export function Hero() {
               <ArrowDown size={16} aria-hidden />
             </a>
             <a
-              href={profile.resumeUrl}
+              href={`${import.meta.env.BASE_URL}${profile.resumeFileName}`}
               download={profile.resumeFileName}
               className="inline-flex items-center gap-2 rounded-lg border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:border-brand-400 hover:text-brand-600 dark:border-slate-700 dark:text-slate-200 dark:hover:border-brand-500/60 dark:hover:text-brand-300"
             >

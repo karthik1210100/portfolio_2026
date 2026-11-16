@@ -23,8 +23,9 @@ describe("resume data contract", () => {
   });
 
   it("points at a downloadable résumé PDF", () => {
-    expect(profile.resumeUrl).toMatch(/\.pdf$/);
     expect(profile.resumeFileName).toMatch(/\.pdf$/);
+    // Filename only — no leading slash — so BASE_URL can be prepended cleanly.
+    expect(profile.resumeFileName).not.toContain("/");
   });
 
   it("has social links that are well-formed and unique", () => {

@@ -32,7 +32,9 @@ describe("<Hero />", () => {
   it("offers a downloadable résumé with the configured filename", () => {
     render(<Hero />);
     const link = screen.getByRole("link", { name: /download résumé/i });
-    expect(link).toHaveAttribute("href", resume.profile.resumeUrl);
+    // URL is built from BASE_URL (so it works under a Pages subpath); it must
+    // end with the configured filename and trigger a download.
+    expect(link.getAttribute("href")?.endsWith(resume.profile.resumeFileName)).toBe(true);
     expect(link).toHaveAttribute("download", resume.profile.resumeFileName);
   });
 });
