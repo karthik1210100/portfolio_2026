@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1120" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Karthikeyan Subramanian — Product / Full-Stack Engineer</title>
+    <meta
+      name="description"
+      content="Karthikeyan Subramanian — Product & Full-Stack Engineer. Rails, React, TypeScript & Bun. Spec-driven, test-first, AI-augmented delivery on a live real-money marketplace."
+    />
+    <meta name="author" content="Karthikeyan Subramanian" />
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Karthikeyan Subramanian — Product / Full-Stack Engineer" />
+    <meta
+      property="og:description"
+      content="Rails · React · TypeScript · Bun — spec-driven, test-first, AI-augmented engineering."
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Prevent theme flash: resolve stored/system preference before paint -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var dark = stored ? stored === "dark" : prefersDark;
+          document.documentElement.classList.toggle("dark", dark);
+        } catch (_) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
