@@ -24,6 +24,10 @@ export interface Profile {
   readonly location: string;
   readonly email: string;
   readonly phone: string;
+  /** Path to the downloadable résumé PDF, served from /public. */
+  readonly resumeUrl: string;
+  /** Filename suggested to the browser when the résumé is downloaded. */
+  readonly resumeFileName: string;
   readonly summary: string;
   /** Short, scannable highlights rendered as hero stat chips. */
   readonly highlights: readonly Highlight[];

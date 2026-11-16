@@ -28,4 +28,11 @@ describe("<Hero />", () => {
     const mail = screen.getByRole("link", { name: /get in touch/i });
     expect(mail).toHaveAttribute("href", `mailto:${resume.profile.email}`);
   });
+
+  it("offers a downloadable résumé with the configured filename", () => {
+    render(<Hero />);
+    const link = screen.getByRole("link", { name: /download résumé/i });
+    expect(link).toHaveAttribute("href", resume.profile.resumeUrl);
+    expect(link).toHaveAttribute("download", resume.profile.resumeFileName);
+  });
 });

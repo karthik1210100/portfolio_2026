@@ -1,4 +1,4 @@
-import { ArrowDown, MapPin } from "lucide-react";
+import { ArrowDown, Download, MapPin } from "lucide-react";
 import { resume } from "@/data/resume";
 import { Icon } from "@/components/ui/Icon";
 import { Pill } from "@/components/ui/Pill";
@@ -69,8 +69,16 @@ export function Hero() {
               <ArrowDown size={16} aria-hidden />
             </a>
             <a
-              href={`mailto:${profile.email}`}
+              href={profile.resumeUrl}
+              download={profile.resumeFileName}
               className="inline-flex items-center gap-2 rounded-lg border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:border-brand-400 hover:text-brand-600 dark:border-slate-700 dark:text-slate-200 dark:hover:border-brand-500/60 dark:hover:text-brand-300"
+            >
+              <Download size={16} aria-hidden />
+              Download résumé
+            </a>
+            <a
+              href={`mailto:${profile.email}`}
+              className="inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold text-slate-600 transition-colors hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-300"
             >
               Get in touch
             </a>

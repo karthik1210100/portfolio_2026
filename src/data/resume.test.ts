@@ -22,6 +22,11 @@ describe("resume data contract", () => {
     expect(profile.email).toMatch(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
   });
 
+  it("points at a downloadable résumé PDF", () => {
+    expect(profile.resumeUrl).toMatch(/\.pdf$/);
+    expect(profile.resumeFileName).toMatch(/\.pdf$/);
+  });
+
   it("has social links that are well-formed and unique", () => {
     expect(profile.socials.length).toBeGreaterThanOrEqual(2);
     const hrefs = profile.socials.map((s) => s.href);

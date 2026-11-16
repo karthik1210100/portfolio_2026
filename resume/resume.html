@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karthikeyan Subramanian — Resume</title>
+<style>
+  :root{
+    --ink:#1a1a1a;
+    --muted:#555;
+    --accent:#1f3864;      /* dark navy — prints clean, ATS-neutral */
+    --rule:#1f3864;
+    --link:#1f4e9c;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family: Arial, Helvetica, "Segoe UI", sans-serif;
+    color:var(--ink);
+    background:#e9ecf1;
+    font-size:9pt;
+    line-height:1.13;
+  }
+
+  /* screen toolbar (hidden when printing) */
+  .toolbar{
+    max-width:820px; margin:18px auto 0; padding:0 8px;
+    display:flex; justify-content:flex-end;
+  }
+  .btn{
+    font:inherit; font-size:10.5pt; cursor:pointer;
+    background:var(--accent); color:#fff; border:none;
+    padding:9px 16px; border-radius:7px;
+  }
+  .btn:hover{ background:#16294a; }
+
+  /* the page sheet */
+  .sheet{
+    max-width:820px; margin:14px auto 40px; background:#fff;
+    padding:14px 46px 18px;
+    box-shadow:0 1px 3px rgba(0,0,0,.12), 0 12px 30px rgba(0,0,0,.10);
+  }
+
+  header{ text-align:center; margin-bottom:6px; }
+  header .name{
+    font-size:19pt; font-weight:700; letter-spacing:1px; margin:0;
+    color:var(--ink);
+  }
+  .tagline{
+    font-size:9.5pt; color:var(--accent); font-weight:700; margin-top:4px;
+    letter-spacing:.2px;
+  }
+  .contact{
+    font-size:9.5pt; color:var(--muted); line-height:1.6; margin-top:5px;
+  }
+  .contact a{ color:var(--muted); text-decoration:none; }
+
+  h2{
+    font-size:10.5pt; text-transform:uppercase; letter-spacing:.6px;
+    color:var(--accent); margin:7px 0 2px; padding-bottom:2px;
+    border-bottom:1.5px solid var(--rule);
+  }
+
+  .summary{ margin:2px 0 0; text-align:justify; }
+
+  .skills .row{ margin:1.5px 0; }
+  .skills .cat{ font-weight:700; }
+
+  .entry{ margin:0 0 4px; }
+  .entry:last-child{ margin-bottom:2px; }
+  .role{ font-weight:700; font-size:10pt; display:block; }
+  .org{ font-weight:700; color:var(--ink); display:block; margin-top:1px; }
+  .dates{ font-size:9pt; color:var(--muted); display:block; margin:1px 0 2px; }
+  ul{ margin:1px 0 0; padding-left:18px; }
+  li{ margin:1.5px 0; text-align:justify; }
+
+  .proj-name{ font-weight:700; }
+  .proj-tech{ color:var(--muted); }
+  a{ color:var(--link); }
+  .ref a{ color:var(--link); text-decoration:none; }
+
+  @media print{
+    body{ background:#fff; font-size:9pt; }
+    .toolbar{ display:none; }
+    .sheet{ box-shadow:none; margin:0; max-width:none; padding:0; }
+    a{ color:var(--ink); }
+    h2{ break-after:avoid; }
+    .role, .org, .dates{ break-after:avoid; }
+    li{ break-inside:avoid; }
+  }
+  @page{ size:A4; margin:7mm 15mm; }
+</style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+
+  <main class="sheet">
+
+    <header>
+      <h1 class="name">KARTHIKEYAN SUBRAMANIAN</h1>
+      <div class="tagline">Product / Full-Stack Engineer · Rails · React · TypeScript · Bun — Spec-Driven, Test-First, AI-Augmented</div>
+      <div class="contact">
+        Coimbatore, Tamil Nadu, India | 7812856527 | <a href="mailto:kkarthik1542734@gmail.com">kkarthik1542734@gmail.com</a><br>
+        GitHub: <a href="https://github.com/karthik1210100">github.com/karthik1210100</a> | LinkedIn: <a href="https://linkedin.com/in/karthik-webdev">linkedin.com/in/karthik-webdev</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p class="summary">
+        Product engineer with ~3 years of full-stack experience shipping production features end-to-end on a
+        live, real-money marketplace. I take ambiguous problems from specification to deployment across a React +
+        TypeScript SPA and a Ruby on Rails API, and I build standalone services in Bun + Hono + TypeScript.
+        I work spec-first (OpenSpec propose → review → apply) and test-first (TDD), use AI coding agents and
+        curated skills to move faster without lowering the bar, and stay security- and blast-radius conscious in a
+        system that funds and releases real money through milestone escrow. Comfortable owning a feature's whole
+        lifecycle: data model, API contract, UI, background jobs, tests, and deploy.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills">
+        <div class="row"><span class="cat">Languages:</span> TypeScript, Ruby, JavaScript, Python, SQL, HTML5, CSS3</div>
+        <div class="row"><span class="cat">Backend:</span> Ruby on Rails, Bun, Hono, Node.js, REST APIs, Microservices, Action Cable / WebSockets, Sidekiq &amp; scheduled jobs, Django</div>
+        <div class="row"><span class="cat">Frontend:</span> React.js, TypeScript, Material UI, react-native-web, Tailwind CSS, Bootstrap</div>
+        <div class="row"><span class="cat">Databases &amp; Background Jobs:</span> PostgreSQL, MySQL, Redis, Sidekiq, Sidekiq Scheduler</div>
+        <div class="row"><span class="cat">Testing &amp; Quality:</span> Test-Driven Development, Automated / integration testing, RSpec, Jest, Bun test, structure-check gates, Postman</div>
+        <div class="row"><span class="cat">Engineering Practice:</span> OpenSpec (spec-driven development), TDD, AI-augmented development (agentic coding, reusable skills), code review, CI gating</div>
+        <div class="row"><span class="cat">Auth &amp; Security:</span> JWT, Pundit, CanCanCan, IDOR remediation, signed / expiring URLs, participant-scoped authorization, AI security scanning</div>
+        <div class="row"><span class="cat">Cloud, Infra &amp; CI/CD:</span> AWS S3, Active Storage, Docker, Docker Compose, nginx, Jenkins, GitLab CI</div>
+        <div class="row"><span class="cat">Payments &amp; Monitoring:</span> Cashfree (escrow / payouts / KYC), PostHog, Prometheus, Yabeda, BugSnag</div>
+        <div class="row"><span class="cat">Tooling:</span> Git, GitHub, Bitbucket</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>How I Engineer</h2>
+      <ul>
+        <li><span style="font-weight:700;">Spec-driven:</span> non-trivial work starts as an OpenSpec change (propose → review → apply) so intent is reviewed and agreed before any implementation, cutting rework and scope drift.</li>
+        <li><span style="font-weight:700;">Test-first:</span> I write the failing test, prove it red and explain why, then implement — which keeps regressions out of a large codebase with no green baseline.</li>
+        <li><span style="font-weight:700;">AI-augmented, standards-held:</span> I use coding agents and curated skills to raise delivery speed while enforcing consistent coding standards and review discipline, not to skip them.</li>
+        <li><span style="font-weight:700;">Blast-radius discipline:</span> I name which environment and which database a change touches before running it — essential in a system that debits real cards.</li>
+        <li><span style="font-weight:700;">Security by default:</span> close IDORs, replace permanent asset URLs with short-lived signed ones, and scope sensitive file access to authorized participants.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+
+      <div class="entry">
+        <span class="role">Product Engineer (AI-driven)</span>
+        <span class="org">Lingaasys Technology</span>
+        <span class="dates">October 2025 – Present</span>
+        <ul>
+          <li>Build and own features end-to-end on Dezinersknot, a two-sided design marketplace with milestone-based escrow — spanning React/TypeScript UI, Rails API, Postgres schema, background jobs, tests and deploy.</li>
+          <li>Designed and built a standalone Bun + Hono + TypeScript microservice (influencer platform) behind nginx that owns its own schema and forwards caller auth to Rails — a clean, well-bounded service boundary with no shared signing secret.</li>
+          <li>Practice spec-driven development with OpenSpec and test-first TDD; added automated coverage with Bun test, Jest and RSpec plus a structure-check gate to keep the failing-set stable.</li>
+          <li>Hardened security across the money paths: closed IDORs, replaced permanent Active Storage URLs with short-lived signed URLs, and moved chat attachments onto an authenticated, participant-scoped, revocable streaming endpoint.</li>
+          <li>Built contract- and milestone-lifecycle notification and transactional-email workflows (in-app + email) with environment-configurable timers and per-milestone reminder gating.</li>
+          <li>Work on real-money payment flows with Cashfree (order funding, escrow, KYC-verified payouts) and application monitoring with Yabeda and Prometheus, applying conservative, lock-guarded patterns around payouts.</li>
+          <li>Operate in an AI-augmented workflow — coding agents, reusable skills and AI security scanners — to compress delivery time while holding coding standards and review quality.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <span class="role">Web Developer / Developer Trainee</span>
+        <span class="org">Mallow Technologies Pvt. Ltd.</span>
+        <span class="dates">May 2023 – May 2025</span>
+        <ul>
+          <li>Progressed from Developer Trainee to Web Developer on full-stack applications built with Ruby on Rails, React and PostgreSQL.</li>
+          <li>Developed and maintained REST API functionality and frontend features for production web applications.</li>
+          <li>Implemented real-time communication using Action Cable, WebSockets and Faye, including a training chat application.</li>
+          <li>Worked on database query optimization and frontend responsiveness to improve application performance.</li>
+          <li>Used BugSnag for error monitoring and collaborated through Git, Bitbucket and team development workflows.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected Projects</h2>
+
+      <div class="entry">
+        <span class="proj-name">Dezinersknot — Design-Services Marketplace with Milestone Escrow</span>
+        <p class="summary">Full-stack marketplace connecting clients and freelance designers through postings, proposals, negotiations, milestone-based contracts funded into escrow, real-time messaging and dispute workflows — plus a standalone influencer microservice.</p>
+        <div><span class="cat" style="font-weight:700;">Technologies:</span> <span class="proj-tech">React, TypeScript, Material UI, Ruby on Rails, Bun, Hono, PostgreSQL, Action Cable, Sidekiq, Redis, AWS S3, Docker, Jenkins, Cashfree.</span></div>
+        <div class="ref"><span style="font-weight:700;">Reference:</span> <a href="https://live.dezinersknot.com/">live.dezinersknot.com</a></div>
+      </div>
+
+      <div class="entry">
+        <span class="proj-name">Influencer Platform Microservice</span>
+        <p class="summary">Separate Bun + Hono + TypeScript service with its own Postgres schema, reached through nginx, forwarding caller tokens to Rails for auth — built spec-first (OpenSpec) and test-first, with onboarding, portfolio and verification flows.</p>
+        <div><span class="cat" style="font-weight:700;">Technologies:</span> <span class="proj-tech">Bun, Hono, TypeScript, PostgreSQL, nginx, OpenSpec, Bun test.</span></div>
+      </div>
+
+      <div class="entry">
+        <span class="proj-name">Senior Living Management System</span>
+        <p class="summary">Contributed to a full-stack senior-living platform with real-time features, database query optimization, error monitoring and digital-signage functionality.</p>
+        <div class="ref"><span style="font-weight:700;">References:</span> <a href="https://continyoucare.com">continYoucare.com</a> | <a href="https://intelligotek.com">intelligotek.com</a></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="entry">
+        <span class="role">Bachelor of Engineering (B.E.) — Civil Engineering</span>
+        <span class="dates">Tamilnadu College of Engineering, Coimbatore | April 2019</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <div class="entry">
+        <span class="role">TypeScript Developer Certification</span>
+        <span class="dates">Cispro Institute, Coimbatore | 2026</span>
+      </div>
+      <div class="entry">
+        <span class="role">Frontend Developer Certification</span>
+        <span class="dates">Cispro Institute, Coimbatore | 2025</span>
+      </div>
+      <div class="entry">
+        <span class="role">Full Stack Developer Certification</span>
+        <span class="dates">Livewire Institute, Karur | 2022</span>
+        <p class="summary" style="margin-top:2px;">Training included Django, MySQL, and a course-management application project.</p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

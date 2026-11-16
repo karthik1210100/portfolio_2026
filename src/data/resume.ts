@@ -17,6 +17,8 @@ export const resume: Resume = {
     location: "Coimbatore, Tamil Nadu, India",
     email: "kkarthik1542734@gmail.com",
     phone: "+91 78128 56527",
+    resumeUrl: "/Karthikeyan-Subramanian-Resume.pdf",
+    resumeFileName: "Karthikeyan-Subramanian-Resume.pdf",
     summary:
       "Product engineer with ~3 years of full-stack experience shipping production features end-to-end on a live, real-money marketplace. I take ambiguous problems from specification to deployment across a React + TypeScript SPA and a Ruby on Rails API, and I build standalone services in Bun + Hono + TypeScript. I work spec-first (OpenSpec propose → review → apply) and test-first (TDD), use AI coding agents and curated skills to move faster without lowering the bar, and stay security- and blast-radius conscious in a system that funds and releases real money through milestone escrow.",
     highlights: [

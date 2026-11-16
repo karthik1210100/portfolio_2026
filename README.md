@@ -79,6 +79,20 @@ Everything the page renders comes from `src/data/resume.ts`, checked against the
 skill group there and the UI updates — the compiler and the data-contract tests
 (`src/data/resume.test.ts`) catch typos, broken links and empty sections.
 
+## Résumé PDF
+
+The hero's **Download résumé** button serves a static PDF from
+`public/Karthikeyan-Subramanian-Resume.pdf` (available at the site root). It's
+generated from the HTML source of record at [`resume/resume.html`](resume/resume.html):
+
+```bash
+bun run resume:pdf   # renders resume/resume.html -> public/…Resume.pdf (needs Playwright)
+```
+
+Edit `resume/resume.html` and re-run the script to refresh the PDF. The link and
+suggested filename live in the content model (`profile.resumeUrl` /
+`profile.resumeFileName`), so the UI stays in sync.
+
 ## Deployment
 
 The build is fully static. `bun run build` emits `dist/`, deployable to any
