@@ -1,13 +1,28 @@
-# portfolio_2026
+<div align="center">
 
-Personal portfolio for **Karthikeyan Subramanian** — Product / Full-Stack Engineer.
+# Karthikeyan Subramanian — Developer Portfolio
 
-A fast, accessible, single-page site built with the same stack the portfolio
-talks about: **React + TypeScript + Bun**, Vite and Tailwind CSS v4. Built
-spec-first in spirit and backed by tests, mirroring the engineering approach it
-describes.
+**A fast, accessible, test-backed single-page portfolio — React 19 + TypeScript + Vite + Tailwind v4, ~77 KB gzip.**
 
-**Live preview:** `bun run dev` → http://localhost:5173
+<br />
+
+[![Live site](https://img.shields.io/badge/Live%20Site-6366f1?style=for-the-badge&logo=githubpages&logoColor=white)](https://karthik1210100.github.io/portfolio_2026/)
+&nbsp;
+[![CI](https://img.shields.io/github/actions/workflow/status/karthik1210100/portfolio_2026/ci.yml?branch=main&style=for-the-badge&label=CI&logo=github)](https://github.com/karthik1210100/portfolio_2026/actions/workflows/ci.yml)
+&nbsp;
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+&nbsp;
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+
+### 👉 [**View the live site**](https://karthik1210100.github.io/portfolio_2026/)
+
+<br />
+
+<a href="https://karthik1210100.github.io/portfolio_2026/"><img src="./screenshot.jpg" alt="Karthikeyan Subramanian — developer portfolio hero" width="860" /></a>
+
+</div>
+
+Personal portfolio for **Karthikeyan Subramanian** — Full-Stack Developer (Rails + React / TypeScript). A single-page site built with the same stack it talks about — React + TypeScript + Bun, Vite and Tailwind CSS v4 — spec-first in spirit and backed by tests, mirroring the engineering approach it describes.
 
 ---
 
