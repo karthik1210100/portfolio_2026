@@ -134,3 +134,13 @@ blocked on permissions, flip the setting and re-run the workflow.
 
 `dist/` also deploys as-is to Netlify, Vercel, S3 + CloudFront or nginx. For a
 root-domain host, no `VITE_BASE` is needed (defaults to `/`).
+
+---
+
+<div align="center">
+
+Built by [Karthikeyan Subramanian](https://github.com/karthik1210100) &middot; [LinkedIn](https://www.linkedin.com/in/karthik-webdev/) &middot; [Live site](https://karthik1210100.github.io/portfolio_2026/)
+
+**Open to full-stack / web developer roles** &middot; Rails · React · TypeScript
+
+</div>
